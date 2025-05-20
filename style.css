@@ -3,7 +3,6 @@
     padding:0;
     box-sizing: border-box;
     font-family: Impact;
-    /* overflow-x: hidden; */
 }
 .container{
     width: 100vw;
@@ -21,7 +20,7 @@ header{
     border-bottom: black 3px solid;
 }
 main{
-    background: linear-gradient(0.25turn, #641503, #d25f23);
+    background: linear-gradient(0.25turn, #ffffff, #fafafa);
     display: grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -31,20 +30,38 @@ main{
     "battle-grid undef-grid"
     ;
     height:90%;
-    /* gap: 23px; */
+}
+.chords{
+    display: inline-block;
 }
 
-#rif{
-    width: 100%;
-    grid-area: rif-grid;
+button{
+    background-color: #ffffff;
+    color:rgb(44, 44, 44);
+    width: 30px;
+    height: 30px;
+    border: black 1px solid;
+    border-radius: 6px;
+}
+button:hover{
+    background-color: #fafafa;
+    color:rgb(44, 44, 44);
+}
+
+button:active{
+    background-color: rgb(197, 197, 197);
+    color: #ffffff;
+
 }
 
 #chrds{
     grid-area: chrds-grid;
 }
+
 #undef{
     grid-area: undef-grid;
 }
+
 #battle{
     grid-area: battle-grid;
 }
@@ -58,12 +75,12 @@ main div{
         width: 85%;
         height: 85%;
         min-width: 200px;
-        align-items: center;
         resize: none;
         border: black 3px solid;
         background-color: white;
     }
 } 
+
 @media (max-width:720px) {
 main{display: flex;
     flex-direction: column;   
@@ -71,14 +88,47 @@ main{display: flex;
     }
 }
 
-#menu--inp{
-    display: none;
+
+div#lutemain1 {
+    vertical-align: middle;
+    margin-top: -85px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-svg + .menu{
-    
+div#lutelines {
+    height: auto; 
+    cursor: pointer;
+    margin-top: 100px; 
+    width: 400px; 
 }
 
-:checked + svg + .menu{
-
+div#vline6,
+div#vline5,
+div#vline4,
+div#vline3,
+div#vline2,
+div#vline1 {
+    width: 475%;  
+    background-color: #ffc023; 
+    height: 10px; 
+    margin-bottom: 20px; 
+    display: block; 
 }
+
+div#vline1 {
+    margin-bottom: 0;  
+}
+
+div#vline1:hover,
+div#vline2:hover,
+div#vline3:hover,
+div#vline4:hover,
+div#vline5:hover,
+div#vline6:hover {
+    background-color: #803d1d; 
+}
+
+
+
